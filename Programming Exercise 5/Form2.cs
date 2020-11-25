@@ -14,7 +14,7 @@ namespace Programming_Exercise_5
     {
         public luckyNumberDisplay()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void Form2_Load(object sender, EventArgs e)
