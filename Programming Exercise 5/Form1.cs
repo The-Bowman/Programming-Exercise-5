@@ -25,6 +25,7 @@ namespace Programming_Exercise_5
             InitializeComponent();
         }
 
+        // launches second form to display lucky number
         private void luckyButton_Click(object sender, EventArgs e)
         {
             luckyNumberDisplay luckyNumberDisplay = new luckyNumberDisplay();
@@ -32,6 +33,7 @@ namespace Programming_Exercise_5
 
         }
 
+        // hides undesired controls at form loading
         private void luckyNumberFinderForm_Load(object sender, EventArgs e)
         {
 
@@ -39,6 +41,7 @@ namespace Programming_Exercise_5
 
         }
 
+        // assigns values and reveals the next controls
         private void clrDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
             shapeLabel.Visible = true;
@@ -46,6 +49,7 @@ namespace Programming_Exercise_5
             color = clrDropDownList.SelectedItem.ToString();
         }
 
+        // assigns values and reveals the next controls
         private void shapeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
             shape = shapeDropDownList.SelectedItem.ToString();
@@ -53,6 +57,7 @@ namespace Programming_Exercise_5
             numberDropDownList.Visible = true;
         }
 
+        // assigns values and reveals the next controls
         private void numberDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
             multiplierLabel.Visible = true;
@@ -63,7 +68,7 @@ namespace Programming_Exercise_5
             luckyNumber = number + (int)mult;
         }
 
-
+        // sets all but the first controls to not be visible
         private void Hide_Content()
         {
             shapeLabel.Visible = false;
@@ -73,7 +78,7 @@ namespace Programming_Exercise_5
             numberLabel.Visible = false;
             numberDropDownList.Visible = false;
         }
-
+        // creates a random number to assign to multipliers to generate lucky numbers
         private double Set_Multiplier_Colors()
         {
             double x = .1;
@@ -101,6 +106,7 @@ namespace Programming_Exercise_5
             return x;
         }
 
+        // creates a random number to assign to multipliers to generate lucky numbers
         private double Set_Multiplier_Shapes()
         {
             double x = .6;
